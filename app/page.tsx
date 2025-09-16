@@ -6,7 +6,6 @@ import {
   Github,
   Linkedin,
   Mail,
-  ExternalLink,
   Download,
   MapPin,
   GraduationCap,
@@ -167,13 +166,24 @@ function StickyTimeline() {
       <div className="mx-auto max-w-6xl px-4 py-16 md:py-28">
         <div className="flex items-end justify-between mb-6">
           <h2 className="text-2xl font-bold">Experience</h2>
-          <m.div style={{ scale: progress }} className="origin-right text-xs rounded-full px-2 py-0.5" style={{ border: "1px solid rgba(147,197,253,0.25)", background: "rgba(147,197,253,0.08)" }}>
+          <m.div
+style={{
+scale: progress,
+border: "1px solid rgba(147,197,253,0.25)",
+background: "rgba(147,197,253,0.08)",
+}}
+className="origin-right text-xs rounded-full px-2 py-0.5"
+>
             Scrolling timeline
           </m.div>
         </div>
         <div ref={ref} className="relative grid md:grid-cols-[340px_1fr] gap-8">
           <div className="md:sticky md:top-24 md:self-start">
-            <m.div style={{ scale: progress }} className="h-2 rounded-full overflow-hidden" style={{ background: "rgba(147,197,253,0.15)" }}>
+          <m.div
+  style={{ scale: progress, background: "rgba(147,197,253,0.15)" }}
+  className="h-2 rounded-full overflow-hidden"
+>
+
               <m.div style={{ width: useTransform(progress, (v) => `${v * 100}%`), background: ACCENT }} className="h-full" />
             </m.div>
             <p className="mt-3 text-slate-400 text-sm">Scroll to progress through roles</p>
